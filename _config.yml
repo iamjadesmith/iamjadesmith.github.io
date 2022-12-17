@@ -203,8 +203,6 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
@@ -263,13 +261,7 @@ compress_html:
 
 # Collections
 collections:
-  recipes:
-    output: true
-    permalink: /:collection/:path/
-  pets:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
+  projects:
     output: true
     permalink: /:collection/:path/
 
@@ -286,10 +278,10 @@ defaults:
       read_time: true
       share: true
       related: true
-  # _pages
+  # _projects
   - scope:
-      path: "_pages"
-      type: pages
+      path: ""
+      type: projects
     values:
       layout: single
       author_profile: true
