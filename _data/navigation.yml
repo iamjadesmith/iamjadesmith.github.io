@@ -1,10 +1,10 @@
 # main links
 main:
-  # - title: "Projects"
-  #   url: /projects/
   - title: "Home"
-    url: /index/
-  # - title: "Fun Facts"
-  #   url: /funfacts/
+    url: /
   - title: "About Me"
     url: /aboutme/
+  # - title: "Projects"
+  #   url: /projects/
+  # - title: "Fun Facts"
+  #   url: /funfacts/
