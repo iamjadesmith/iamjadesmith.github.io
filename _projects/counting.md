@@ -28,4 +28,13 @@ This is where the problem solving and analytical side came out of me. I thought 
 
 I had a general idea about how to make a program that could tell if there were no mistakes in the channel. However, there was one thing that I needed to research. That thing that I needed to research was how to get the channel exported in a way that would allow me to run a program on it.
 
-I found this [Discord Chat Exporter](https://github.com/Tyrrrz/DiscordChatExporter) from Tyrrrz that was perfect for the job. It allows me to export the channel nicely into a csv, txt, or other formats which is awesome. It even has a CLI which will be perfect for automating it.
+I found this [Discord Chat Exporter](https://github.com/Tyrrrz/DiscordChatExporter) from Tyrrrz that was perfect for the job. It allows me to export the channel nicely into a csv, txt, or other formats which is awesome. It even has a CLI which will be perfect for automating everything with a bash script.
+
+I used this line of code to export the channel into a csv into the directory that I want (token and channelid are inserted with my Discord credentials):
+
+```bash
+dotnet DiscordChatExporter.Cli.dll export -t "token" -c channelid -f Csv -o "/Users/jade/Documents/Counting/DiscordChatExporter/Exports/counting.csv" --dateformat "MMMM-yyyy"
+```
+
+This is the format of the data:
+
