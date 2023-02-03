@@ -34,5 +34,21 @@ I used this line of code to export the channel into a csv into the directory tha
 dotnet DiscordChatExporter.Cli.dll export -t "token" -c channelid -f Csv -o "/Users/jade/Documents/Counting/DiscordChatExporter/Exports/counting.csv" --dateformat "MMMM-yyyy"
 ```
 
-This is the format of the data:
+
+This is the format of the data exported:
+
+![Data](\assets\images\counting\data.png)
+
+---
+
+# R Code
+
+## Cleaning
+
+There were two apparent things that stood out to me when I looked at the data:
+
+1. Text with the number in the Content column making the content column read as character instead of numeric
+2. The #nnnn as the last 5 characters of the Author column
+
+### Making Content Numeric
 
