@@ -1,28 +1,26 @@
 ---
 title: "Counting"
-permalink: /counting/
+permalink: /projects/counting/
 toc: true
 ---
 
-This was one project that I chose to do on my spare time. I often like to do various programming things in my spare time, and I think this is a fun example of this.
+In my spare time, I have enjoyed programming various projects and “Counting” is a fun example of this.
 
 # Background
 
-My friends and I have a group chat in Discord to communicate. In that Discord, we have various channels that we use to communicate different things about different topics. One of my friends thought of the idea for something that we could all do when we are bored. This channel is called counting, and here is an image to demonstrate what happens in this channel.
+My friends and I communicate through a Discord group chat that includes a variety of channels and topics. “Counting” was developed as a simple channel we could all enjoy to pass the time. Below is an image that demonstrates the basic concept of the channel. 
 
 ![Counting Image](\assets\images\counting\first.png)
 
-As you can see from the image, one person says a number, then the next person says the number that is supposed to be after that and so on. The only rule is that you cannot go twice in a row.
-
-Here is another image that shows how long this channel has gone:
+This image shows how high the original “Counting” channel has gone in number. 
 
 ![Counting Image](\assets\images\counting\last.png)
 
-After a long time of counting, we have made it to very large numbers. With numbers getting this large, it came up in conversations with my friends that what if someone has made a mistake in this counting channel. This got me thinking about possible ways of checking for mistakes. Obviously going through each number one by one would be painful to look at, and I could even miss a mistake trying to do that myself.
+It came up in conversation with my friends that there was a high probability of mistakes being made. Since it would have been too tedious to visually sort through all the numbers and count up the mistakes for each person, I wanted to develop a program to do this. 
 
 ## The Idea
 
-This is where the problem solving and analytical side came out of me. I thought of the idea to make a program check if there are any mistakes in the Discord channel. I also thought of the idea to make statistics as well to see how many numbers each person counts during the current month as well as a running total of the numbers counted by each person throughout the entirety of the channel. This is how the project came to be.
+With my analytical and problem-solving skills, I have been able to use R and Bash to build a program that sorts through the data and presents statistics for each person who was involved that month. These statistics include how many numbers each person has submitted to the channel and the number of mistakes someone makes each month. The program will then copy text to the clipboard for sending a message about who the winner of the month was and presents the evidence in the form of two bar charts; one bar chart for the month and another bar chart for the year to date. 
 
 # Research
 
