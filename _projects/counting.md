@@ -56,7 +56,7 @@ There were two apparent things that stood out to me when I looked at the data:
 
 To fix these problems, I just used these lines of code:
 
-```R
+```r
 numbers <- as.numeric(gsub(".*?([0-9]+).*", "\\1", counting$Content))
 counting$people <- gsub("*[#][0-9]*", "", counting$Author)
 ```
@@ -67,7 +67,7 @@ counting$people <- gsub("*[#][0-9]*", "", counting$Author)
 
 First, I made a mistake counter and a list that would contain the people that made mistakes. I also made a variable called between, that would be a list containing between the numbers the mistake is made between.
 
-```R
+```r
 mistake_counter <- 0
 mistake_person <- c()
 between <- c()
@@ -75,7 +75,7 @@ between <- c()
 
 When checking for mistakes in the counting, I first thought of making a while loop that starts at 1 and increments by 1 and checks if each number in `numbers` is equal to that number in the while loop. It would look like this:
 
-```R
+```r
 i <- 0
 while (i < length(numbers)) {
     if (numbers[i] != i) {
@@ -90,17 +90,17 @@ However, this initial method that I thought of to check for mistakes had a flaw 
 
 | Numbers | `i` | Mistake |
 |:-------:|:-:|:---:|
-|    1    | 1 | Good |
-|    2    | 2 | Good |
-|    **4**    | **3** | **Bad** |
-|    5    | 4 | **Bad** |
-|    6    | 5 | **Bad** |
+|    1    | 1 | No |
+|    2    | 2 | No |
+|    **4**    | **3** | **Yes** |
+|    5    | 4 | **Yes** |
+|    6    | 5 | **Yes** |
 
 The mistake is made at 3, but it will continue to think it is a mistake after 3 because 5 does not equal 4 either and so on.
 
 I could fix this with some if statements in the loop to increment i by an extra 1 or minus 1 depending on the mistake made, but that seems innefficient. I later came up with a better idea that was more efficient than my first idea.
 
-```R
+```r
 for (i in 1:length(numbers)) {
   if (numbers[i] != 1 && numbers[i] - numbers[i - 1] != 1) {
     mistake_counter <- mistake_counter + 1
@@ -116,10 +116,32 @@ It would make the table look like this:
 
 | Numbers | `i` | Mistake | n[i] - n[i - 1]|
 |:-------:|:-:|:---:|:---:|
-|    1    | 1 | Good | 0 |
-|    2    | 2 | Good | 1 |
-|    **4**    | **3** | **Bad** | 2 |
-|    5    | 4 | **Good** | 1 |
-|    6    | 5 | **Good** | 1 |
+|    1    | 1 | No | 0 |
+|    2    | 2 | No | 1 |
+|    **4**    | **3** | **Yes** | **2** |
+|    5    | 4 | **No** | 1 |
+|    6    | 5 | **No** | 1 |
 
 > In my if statement in the code above, I made an exception if the number is 1 since it is the start.
+
+## Plots
+
+With a little help from ggplot, I was able to make some bar charts that show how many numbers each person counted during the month and also the running total to see how many numbers each person counted in total. Here is what they look like for April 2020:
+
+![Month Count](\assets\images\counting\month_count.png)
+
+![Running Total](\assets\images\counting\running_total.png)
+
+> These were ran as of February 2023, so the Running Total will represent the total from the start until when I ran the program. I figured if I ran the code on the first of every month, I could have the running total run that way.
+
+## Text Output to Chat
+
+I also have the R program generate the text that I want to send to the Discord chat along with the plots that I send. I then have it copy that text to my clipboard on my computer with the package "clipr" which I can immediately paste into the Discord chat. For April 2020, this is what it would output:
+
+> Welcome to the counting statistics for April 2020:
+> There were 6 mistakes made this month. The mistakes were made by GoldenArcanoid, JoeJadJavaJim, yimmyyaaaaaas, Trevinator, Stella and, Clare K. Those mistakes were made between 584 and 586, 1068 and 1070, 3644 and 3646, 5482 and 5484, 7387 and 7389 and, 11009 and 11011. The counter of the month for this month is Trevinator with 2168 numbers counted. Here is a graph showing the number of numbers counted by everyone this month as well as the current running total.
+
+With the R code written to do everything I want, I can move on to automating everything to happen with bash.
+
+# Bash
+
