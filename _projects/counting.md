@@ -145,3 +145,48 @@ With the R code written to do everything I want, I can move on to automating eve
 
 # Bash
 
+I was able to write a bash script to making everything I want happen by only typing one line into the terminal. This is a pretty basic bash script, but it running everything and sending it to the Discord chat much quicker. Here is a brief walkthrough of the script.
+
+First, I started with moving to the directory I wanted with a basic cd command. I then had it ask what month and year I wanted to run the statistics for with the following code:
+
+```bash
+echo What month?
+read month
+echo What year?
+read year
+```
+
+I could then run the exporter that I found to export the channel. I then cd into the Exports folder that I have, so I can run my R code with the month and year arguments with the following:
+
+```bash
+Rscript counting.R $month $year
+```
+
+Finally, I move and rename the files of the graphs and data to the folder in the form of year/month with the following code:
+
+```bash
+if [ -d "/Users/jade/Documents/Counting/DiscordChatExporter/Exports/$year" ];
+then
+    mkdir $year/$month
+    mv month_count.png $year/$month/$month.png
+    mv running_total.png $year/$month/running_total.png
+    mv counting.csv $year/$month/$month.csv
+else
+    mkdir $year $year/$month
+    mv month_count.png $year/$month/$month.png
+    mv running_total.png $year/$month/running_total.png
+    mv counting.csv $year/$month/$month.csv
+fi
+```
+
+> The if statement is to check if the year folder already exists, since it is already usually created unless it is a new year.
+
+I then have it open the folder I just ran the counting statistics for, so I can easily send off the charts to the Discord.
+
+```bash
+open $year/$month
+```
+
+# Conclusion
+
+That is my project on checking my counting channel for mistakes while also giving some useful statistics about it. It was an example of a fun project that I did as I like to find things to optimize in my free time.
