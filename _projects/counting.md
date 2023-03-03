@@ -139,6 +139,7 @@ With a little help from ggplot, I was able to make some bar charts that show how
 I also have the R program generate the text that I want to send to the Discord chat along with the plots that I send. I then have it copy that text to my clipboard on my computer with the package "clipr" which I can immediately paste into the Discord chat. For April 2020, this is what it would output:
 
 > Welcome to the counting statistics for April 2020:
+>
 > There were 6 mistakes made this month. The mistakes were made by GoldenArcanoid, JoeJadJavaJim, yimmyyaaaaaas, Trevinator, Stella and, Clare K. Those mistakes were made between 584 and 586, 1068 and 1070, 3644 and 3646, 5482 and 5484, 7387 and 7389 and, 11009 and 11011. The counter of the month for this month is Trevinator with 2168 numbers counted. Here is a graph showing the number of numbers counted by everyone this month as well as the current running total.
 
 With the R code written to do everything I want, I can move on to automating everything to happen with bash.

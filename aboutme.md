@@ -5,7 +5,7 @@ author_profile: true
 toc: true
 ---
 
-## Eductation
+## Education
 
 ### Drake University
 
