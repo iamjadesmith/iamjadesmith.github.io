@@ -16,7 +16,6 @@ toc: true
 
 ### Luverne High School
 * High School Diploma
-* GPA: 3.84
 
 ## Actuarial Exams
 * Passed Exam FM
