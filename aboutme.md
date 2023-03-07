@@ -20,7 +20,7 @@ toc: true
 
 ## Actuarial Exams
 * Passed Exam FM
-* Sitting for Exam P in March 2023
+* Sitting for Exam P in May 2023
 
 ## Work Experience
 
@@ -33,7 +33,7 @@ toc: true
 **From**: February 2022 - May 2022
 
 * Helped startup companies using the actuarial knowledge that I have learned
-* Developed a pricing model for an emergency insurance
+* Developed a baseline pricing model without data
 * Wrote a report to simplify complex ideas for anyone to understand
 
 ### Target
@@ -96,3 +96,10 @@ Community Service
 * Bash
 * Applescript
 * HTML/CSS
+
+## Fun Facts
+
+* I love to build computers and tinker with computer hardware.
+* Baseball season is my favorite time of the year.
+    * The Minnesota Twins are my favorite team.
+* When I am not doing either of the above things, I enjoy finding things to automate and optimize in my spare time.
