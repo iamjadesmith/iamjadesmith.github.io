@@ -10,7 +10,7 @@ In my spare time, I have enjoyed programming various projects and “Counting”
 
 # Background
 
-My friends and I communicate through a Discord group chat that includes a variety of channels and topics. “Counting” was developed as a simple channel we could all enjoy to pass the time. Below is an image that demonstrates the basic concept of the channel. 
+My friends and I communicate through a Discord group chat that includes a variety of channels and topics. “Counting” was developed as a simple channel we could all enjoy passing the time. Below is an image that demonstrates the basic concept of the channel. 
 
 ![Counting Image](\assets\images\counting\first.png)
 
@@ -49,7 +49,7 @@ This is the format of the data exported:
 
 ## Cleaning
 
-There were two apparent things that stood out to me when I looked at the data:
+Two apparent things stood out to me when I looked at the data:
 
 1. Text with the number in the Content column making the content column read as character instead of numeric
 2. The #nnnn as the last 5 characters of the Author column
@@ -65,7 +65,7 @@ counting$people <- gsub("*[#][0-9]*", "", counting$Author)
 
 ## Checking for Mistakes
 
-First, I made a mistake counter and a list that would contain the people that made mistakes. I also made a variable called between, that would be a list containing between the numbers the mistake is made between.
+First, I made a mistake counter and a list that would contain the people that made mistakes. I also made a variable called between, which would be a list containing the numbers the mistake is made between.
 
 ```r
 mistake_counter <- 0
@@ -96,9 +96,9 @@ However, this initial method that I thought of to check for mistakes had a flaw 
 |    5    | 4 | **Yes** |
 |    6    | 5 | **Yes** |
 
-The mistake is made at 3, but it will continue to think it is a mistake after 3 because 5 does not equal 4 either and so on.
+The mistake is made at 3, but it will continue to think it is a mistake after 3 because 5 does not equal 4 either, and so on.
 
-I could fix this with some if statements in the loop to increment i by an extra 1 or minus 1 depending on the mistake made, but that seems innefficient. I later came up with a better idea that was more efficient than my first idea.
+I could fix this with some if statements in the loop to increment i by an extra 1 or minus 1 depending on the mistake made, but that seems inefficient. I later came up with a better idea that was more efficient than my first idea.
 
 ```r
 for (i in 1:length(numbers)) {
@@ -110,7 +110,7 @@ for (i in 1:length(numbers)) {
 }
 ```
 
-With this code, it checks if the current number minus the number before it is exactly equal to 1. If that is not the case, a mistake is made. This makes it so the mistake is only made at the mistake, and not continously after that if the numbers after the mistake are correct.
+With this code, it checks if the current number minus the number before it is exactly equal to 1. If that is not the case, a mistake is made. This makes it so the mistake is only made at the mistake, and not continuously after that if the numbers after the mistake are correct.
 
 It would make the table look like this:
 
@@ -132,7 +132,7 @@ With a little help from ggplot, I was able to make some bar charts that show how
 
 ![Running Total](\assets\images\counting\running_total.png)
 
-> These were ran as of February 2023, so the Running Total will represent the total from the start until when I ran the program. I figured if I ran the code on the first of every month, I could have the running total run that way.
+> These were run as of February 2023, so the Running Total will represent the total from the start until when I ran the program. I figured if I ran the code on the first of every month, I could have the running total run that way.
 
 ## Text Output to Chat
 
@@ -146,9 +146,9 @@ With the R code written to do everything I want, I can move on to automating eve
 
 # Bash
 
-I was able to write a bash script to making everything I want happen by only typing one line into the terminal. This is a pretty basic bash script, but it running everything and sending it to the Discord chat much quicker. Here is a brief walkthrough of the script.
+I was able to write a bash script to make everything I want to happen by only typing one line into the terminal. This is a pretty basic bash script, but it running everything and sending it to the Discord chat quicker. Here is a brief walkthrough of the script.
 
-First, I started with moving to the directory I wanted with a basic cd command. I then had it ask what month and year I wanted to run the statistics for with the following code:
+First, I started by moving to the directory I wanted with a basic cd command. I then had it ask what month and year I wanted to run the statistics for with the following code:
 
 ```bash
 echo What month?
@@ -180,9 +180,9 @@ else
 fi
 ```
 
-> The if statement is to check if the year folder already exists, since it is already usually created unless it is a new year.
+> The if statement is to check if the year folder already exists since it is already usually created unless it is a new year.
 
-I then have it open the folder I just ran the counting statistics for, so I can easily send off the charts to the Discord.
+I then have it open the folder I just ran the counting statistics for, so I can easily send off the charts to Discord.
 
 ```bash
 open $year/$month

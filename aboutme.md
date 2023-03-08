@@ -93,6 +93,7 @@ Community Service
 * Java
 * Haskell
 * Bash
+* Git
 * Applescript
 * HTML/CSS
 
