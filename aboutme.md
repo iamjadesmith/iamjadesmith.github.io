@@ -32,7 +32,7 @@ toc: true
 **From**: February 2022 - May 2022
 
 * Helped startup companies using the actuarial knowledge that I have learned
-* Developed a baseline pricing model without data
+* Developed a baseline pricing model for emergency insurance without data
 * Wrote a report to simplify complex ideas for anyone to understand
 
 ### Target
