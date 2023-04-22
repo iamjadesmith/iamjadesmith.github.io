@@ -73,13 +73,14 @@ Community Service
 
 ## Technological Skills
 
-### Microsoft Office
+### Software
 
-* Word
-* Excel
+* Microsoft Word
+* Microsoft Excel
     * VBA
-* PowerPoint
-* Access
+* Microsoft PowerPoint
+* Microsoft Access
+* Tableau
 
 ### Programming
 
