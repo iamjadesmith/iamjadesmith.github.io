@@ -12,14 +12,14 @@ toc: true
 * Major: Actuarial Science
 * Minors: Data Analytics and Computer Science
 * Bachelor of Science and Public Administration
-* GPA: 3.56
+* GPA: 3.59
 
 ### Luverne High School
 * High School Diploma
 
 ## Actuarial Exams
 * Passed Exam FM
-* Sitting for Exam P in July 2023
+* Sitting for Exam P in September 2023
 
 ## Work Experience
 
