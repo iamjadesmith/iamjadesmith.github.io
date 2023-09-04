@@ -19,7 +19,7 @@ toc: true
 
 ## Actuarial Exams
 * Passed Exam FM
-* Sitting for Exam P in September 2023
+* Sitting for Exam P in November 2023
 
 ## Work Experience
 
